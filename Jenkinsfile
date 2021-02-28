@@ -1,10 +1,6 @@
 pipeline {
-    agent {
-        any {
-            image 'node:6-alpine'
-            args '-p 3000:3000'
-        }
-    }
+    agent  any
+    tools {nodejs "nodejs"}
      environment {
             CI = 'true'
         }
